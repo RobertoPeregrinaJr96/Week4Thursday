@@ -1,14 +1,10 @@
-const reverseString = (string) => string.split('').reverse().join('')
-
-
-// console.log(reverseString('string'))
-// console.log(reverseString(['string', 'banana']))
-// console.log(reverseString(26))
-
-
-module.exports = {reverseString};
-
-// module.exports = function reverseString() {
-
-
-// }
+module.exports = function reverseString(string) {
+    //!!START
+    if (typeof string !== "string") {
+      throw new TypeError(
+        `reverseString requires a string not a ${typeof string}`
+      );
+    }
+    return [...string].reverse().join("");
+    //!!END
+  };
